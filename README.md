@@ -4,9 +4,9 @@ A Clojure library to generate gravatar avatar urls
 
 ## Usage
 
-Add [gravatar "0.1.0"] to your dependencies,
-add (:require [gravatar :refer avatar-url]) to your
-namespace declaration. Then call avatar-url like
+Add `[gravatar "0.1.0"]` to your dependencies,
+add `(:require [gravatar :refer avatar-url])` to your
+namespace declaration. Then call `avatar-url` like
 this:
 
 ```
