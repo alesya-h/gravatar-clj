@@ -1,6 +1,6 @@
 # gravatar
 
-A Clojure library to generate gravatar avatar urls
+A Clojure/ClojureScript library to generate gravatar avatar urls
 
 ## Usage
 
