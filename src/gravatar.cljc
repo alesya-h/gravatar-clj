@@ -1,6 +1,6 @@
 (ns gravatar
-  (:require #+cljs [cljs-hash.md5 :refer [md5]]
-            #+clj  [digest :refer [md5]]
+  (:require #?(:cljs [cljs-hash.md5 :refer [md5]]
+               :clj  [digest :refer [md5]])
             [clojure.string :as str]))
 
 (defn params->query [params]
@@ -20,6 +20,7 @@
 
 (defn avatar-url
   [email & {:keys [default rating size https] :as options}]
+  (binding [*out* *err*] (pr email))
   (let [params (params->query (dissoc options :https))
         params-str (if (empty? params)
                      ""
