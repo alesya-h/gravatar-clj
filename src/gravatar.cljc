@@ -20,7 +20,6 @@
 
 (defn avatar-url
   [email & {:keys [default rating size https] :as options}]
-  (binding [*out* *err*] (pr email))
   (let [params (params->query (dissoc options :https))
         params-str (if (empty? params)
                      ""
