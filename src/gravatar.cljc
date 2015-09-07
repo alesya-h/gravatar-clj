@@ -1,4 +1,5 @@
 (ns gravatar
+  (:import [java.net URLEncoder])
   (:require #?(:cljs [cljs-hash.md5 :refer [md5]]
                :clj  [digest :refer [md5]])
             [clojure.string :as str]))
@@ -6,7 +7,7 @@
 (defn params->query [params]
   (->> params
        (filter (fn [[k v]] v))
-       (map (fn [[k v]] [(name k) v]))
+       (map (fn [[k v]] [(name k) (URLEncoder/encode (str v))]))
        (map #(str/join "=" %))
        (str/join "&")))
 

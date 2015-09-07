@@ -15,7 +15,7 @@
 (swap! boot.repl/*default-middleware* conj 'cider.nrepl/cider-middleware)
 
 (require '[adzerk.bootlaces :refer :all])
-(def +version+ "1.0.1")
+(def +version+ "1.0.2")
 (bootlaces! +version+)
 
 (task-options! pom {:project     'gravatar
