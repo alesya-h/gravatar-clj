@@ -3,4 +3,5 @@ pom.xml.asc
 *.jar
 *.class
 /.nrepl-port
+/.nrepl-history
 /target
