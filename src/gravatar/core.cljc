@@ -1,4 +1,4 @@
-(ns gravatar
+(ns gravatar.core
   #?(:clj (:import [java.net URLEncoder]))
   (:require #?(:cljs [cljs-hash.md5 :refer [md5]]
                :clj  [digest :refer [md5]])

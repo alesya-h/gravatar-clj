@@ -7,7 +7,7 @@
           :source-paths #{"src"})
 
 (require '[adzerk.bootlaces :refer :all])
-(def +version+ "1.0.3")
+(def +version+ "1.1.0")
 (bootlaces! +version+)
 
 (task-options! pom {:project     'gravatar
