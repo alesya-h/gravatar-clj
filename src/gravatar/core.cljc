@@ -18,7 +18,7 @@
     "http://www.gravatar.com/"))
 
 (defn email-hash [email]
-  (md5 (str/lower-case email)))
+  (md5 (str/lower-case (str email))))
 
 (defn avatar-url
   [email & {:keys [default rating size https] :as options}]
